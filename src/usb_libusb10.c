@@ -440,7 +440,7 @@ FN_INTERNAL int fnusb_open_subdevices(freenect_device *dev, int index)
 
 				// set the LED for non 1414 devices to keep the camera alive for some systems which get freezes
 				libusb_device * audio = fnusb_find_sibling_device(ctx, camera, devs, count, &fnusb_is_audio);
-				fnusb_keep_alive_led(ctx, audio);
+				//fnusb_keep_alive_led(ctx, audio);
 
 				// for newer devices we need to enable the audio device for motor control
 				// we only do this though if motor has been requested.
